@@ -1,8 +1,8 @@
 import pandas as pd
 from sodapy import Socrata
 
-client = Socrata("data.cityofnewyork.us", "PXkXxMVDwDUe5OaptO5qTbo2e",
-                 username="dso2119@columbia.edu", password="Providence@024")
+client = Socrata("data.cityofnewyork.us", "apptoken",
+                 username="blah@blah.com", password="blah")
 
 
 client.timeout = 500
