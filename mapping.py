@@ -1,4 +1,8 @@
 from sodapy import Socrata
+import os
+import folium
+import pandas as pd
+import cgi
 
 client = Socrata("data.cityofnewyork.us", "iBBb7XdJQQL5zLxWTKQyP8fVN",
                  username="plm2130@columbia.edu", password="hHfa29h7pWmyR6g7e7")
@@ -12,10 +16,6 @@ no_nan_df = zip_311_df.dropna()
 no_nan_df.reset_index(drop=True, inplace=True)
 no_nan_df.head(LIMIT)
 
-import os
-import folium
-import pandas as pd
-import cgi
 
 form = cgi.FieldStorage()
 searchterm =  form.getvalue('searchbox')
